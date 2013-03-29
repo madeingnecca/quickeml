@@ -1,4 +1,4 @@
-(function($) {
+(function() {
   var html = document.documentElement.innerHTML;
   var encoder = document.createElement('DIV');
   var htmlEncoded;
