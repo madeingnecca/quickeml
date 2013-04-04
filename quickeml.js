@@ -1,6 +1,7 @@
 (function() {
   var html = document.documentElement.innerHTML;
   var encoder = document.createElement('DIV');
+  var charset = document.charset || document.characterSet || 'UTF-8';
   var htmlEncoded;
 
   html = '<html>' + html + '</html>';
@@ -17,12 +18,12 @@
   var eml = [
     'Date: ' + (new Date).toGMTString(),
     'To: teddy@bear.com',
-    'From: me@madeingnecca.com',
-    'Subject: html to eml',
+    'From: me@domain.com',
+    'Subject: Eml version of "' + document.location.href + '"',
     'X-Mailer: quickeml',
     'MIME-Version: 1.0',
     'Content-Transfer-Encoding: 8bit',
-    'Content-Type: text/html; charset="UTF-8"'
+    'Content-Type: text/html; charset="' + charset + '"'
   ];
 
   eml.push('');
